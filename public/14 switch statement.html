@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch statements</title>
+</head>
+<body>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem nihil, neque quos sunt veritatis magni error consequatur explicabo aliquid optio dicta cupiditate laboriosam illo voluptas recusandae atque sint dolore aut. Adipisci debitis consequuntur voluptatum unde error quia quasi. Consectetur nemo debitis labore vero unde reprehenderit iste? Veritatis non minus expedita praesentium perferendis! Veritatis ratione facere corrupti tenetur debitis sapiente magnam nemo sit dolor ex sint ad officiis repellendus, amet quod quos saepe nihil et quibusdam eum labore quis? Quibusdam possimus fugit facilis, numquam consequuntur corrupti veritatis voluptate quod molestiae doloremque temporibus cum quis doloribus expedita quisquam sapiente deleniti optio excepturi.</p>
+
+
+
+    <script>
+        let age=20
+        if(age < 1){
+            console.log("you are in Parental stage")
+        }
+        else if(age < 2){
+            console.log("you are in Baby stage")
+
+        }
+        else if(age < 4){
+            console.log("you are in Toddler stage")
+
+        }
+        else if(age < 6){
+            console.log("you are in Preschool stage")
+
+        }
+        else if(age < 13){
+            console.log("you are in Gradeschooler stage")
+
+        }
+        else if(age < 19){
+            console.log("you are in Teen stage")
+
+        }
+        else{
+            console.log("you are in Young Adult stage")
+
+        }
+        let device= "laptop"
+        // switch statement is used for avoiding repetation of if else 
+        switch(device){
+            case "laptop":
+                console.log("its laptop")
+                break
+                
+            case "smartphone":
+                console.log("its smartphone")
+                break
+                
+            case "desktop":
+                console.log("its desktop")
+                break
+                
+            default:
+               console.log("dont know")
+        }
+
+    </script>
+</body>
+</html>

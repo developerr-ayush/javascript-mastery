@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow function</title>
+</head>
+<body>
+    
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi debitis accusamus eligendi similique sequi itaque hic recusandae quaerat nostrum neque. Nihil, placeat voluptatem quas rem in, exercitationem minus vero impedit doloremque dolores culpa ratione praesentium facilis velit maiores voluptate iste tempore deserunt quasi quibusdam. Perspiciatis pariatur beatae quo iure dolore tempora provident vero fugiat voluptatum? Maiores porro harum dolorem molestias autem repudiandae voluptate. Quae quas ea vel, quisquam praesentium exercitationem, ipsa quo eveniet maxime tempora, rem cumque voluptas obcaecati perspiciatis? Quod minus cum pariatur dolorem! Nulla fugit doloremque, quasi a magnam commodi, facere repellendus corrupti ad rerum ratione nesciunt ut!</p>
+
+    <script>
+        // normal function 
+        function ayush(Name){
+            console.log("Normal Function With Parameters, "+ Name)
+        }
+        // execution 
+        ayush("ayush")
+
+        // single line arrow function 
+        let myfunction=()=> console.log("Arrow function without parameters")
+        myfunction ()
+        
+        // single line arrow function with single parameter 
+        let age= age => console.log("Arrow function with parameters like My Age Is "+ age)
+
+        age(18)
+
+
+        //single line arrow function with multiple parameter 
+        let age1= (age,name) => console.log("single line arrow function with multiple parameter like My Age Is "+ age+name)
+        age1(18," ayush")
+        
+
+        // multiline line arrow function with multiple parameter 
+        let age2= (age,name,address) => {
+            console.log("multiline line arrow function with multiple parameter example is below")
+            console.log("My Age Is "+ age)
+            console.log("My Name Is "+ name)
+            console.log("My Address Is "+ address)
+        }
+        age2(18," ayush","Mumbai")
+    </script>
+</body>
+</html>

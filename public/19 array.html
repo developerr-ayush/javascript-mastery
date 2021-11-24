@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h2>Array</h2>
+
+    <script>
+        // array 
+        let dob="5th Nov"
+        let myarray=["Ayush","Shah",18,true,dob];
+        //              0       1    2   3   4  
+        // array starts for 0 
+
+        // access array 
+        console.log(myarray)
+        // finding total length of array 
+        console.log(myarray.length)
+
+        // access single value from array 
+        console.log(myarray[1])
+
+        // accessing 1st item from array 
+        console.log(myarray[0])
+
+        // accessing last item from array 
+        let lastitem=myarray.length -1
+        console.log(myarray[lastitem])
+
+        
+        // methods 
+
+        let ayushArray=["Ayush","Shah",18,"Male"]
+        console.log(ayushArray)
+
+        // adding items in array 
+
+        // unshift is used for adding items in starting of array
+        ayushArray.unshift("5th Nov")
+        console.log(ayushArray)
+
+        // push is used to add in last 
+        ayushArray.push("Web Developer")
+        console.log(ayushArray)
+
+
+        // removing items in array 
+
+        // shift is used to remove 1st item 
+        ayushArray.shift()
+        console.log(ayushArray)
+
+        // pop is used to remove last item 
+        ayushArray.pop()
+        console.log(ayushArray)
+        
+        // splice is used to remove some specific item
+        // .splice(item index,item to remove )
+        ayushArray.splice(0,3)
+        
+        console.log(ayushArray)
+    </script>
+</body>
+</html>

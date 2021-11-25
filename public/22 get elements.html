@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Elements</title>
+</head>
+
+<body>
+
+    <div id="main">
+        <h1 id="heading">
+            Ayush Shah
+        </h1>
+        <p id="para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, autem!
+        </p>
+        <h3 class="dummy">Lorem ipsum dolor sit amet.</h3>
+        <h3 class="dummy">Lorem ipsum dolor sit amet.</h3>
+    </div>
+
+    <script>
+
+
+
+        // getting element by id 
+        let head = document.getElementById("heading")
+        let para = document.getElementById("para")
+        console.log(head)
+        console.log(para)
+
+        // getting element by class 
+        // accessing values by class always return in object
+        let dummy = document.getElementsByClassName("dummy")
+        console.log(dummy)
+
+
+        // dom manupulation 
+        head.innerText="My Name Is Ayush"
+
+
+        // innerHTML vs innerText 
+
+        // inner html will bring all html elements along with text 
+        // inner text will just bring texts 
+        let main= document.getElementById("main").innerHTML
+        console.log(main)
+
+
+        main= document.getElementById("main").innerText
+        console.log(main)
+
+
+
+        // query selector 
+
+        // using query selector you can get every elements 
+        // it can only acces one elements which is on first 
+        let query = document.querySelector("#para")
+        console.log(query)
+
+        query = document.querySelector(".dummy")
+        console.log(query)
+
+        // query selector all can get all elements 
+        query = document.querySelectorAll(".dummy")
+        console.log(query)
+    </script>
+</body>
+
+</html>

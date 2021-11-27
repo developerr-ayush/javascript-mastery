@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event listener</title>
+</head>
+<body>
+   
+
+    <h3>Counter</h3>
+
+    <button id="subtraction">sub</button>
+    <h1 id="number">0</h1>
+    <button id="addition">Add</button>
+
+    <script>
+      
+
+
+
+
+
+        // practical 
+        let add = document.querySelector("#addition")
+        let sub = document.querySelector("#subtraction")
+        
+        let number = document.querySelector("#number")
+        add.addEventListener("click",()=>{
+            // console.log("clicked");
+            let calculate = number.innerHTML
+            number.innerHTML = parseInt(calculate)+1;
+        })
+        
+        sub.addEventListener("click",()=>{
+            // console.log("clicked");
+            let calculate = number.innerHTML
+            number.innerHTML = parseInt(calculate)-1;
+        })
+        
+    </script>
+</body>
+</html>

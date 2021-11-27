@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project tab</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-size: 20px;
+            margin: 0;
+            padding: 0;
+
+        }
+        .wrapper{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            max-width: 500px;
+            width: 100%;
+        }   
+        .buttons-container{
+            display: flex;
+            width: 100%;
+        }
+        .buttons-container>button{
+            width:calc(100%/3);
+            border: 0;
+            padding: 10px;
+            cursor: pointer;
+            background-color: rgb(224, 224, 224);
+            
+        }      
+        .box-container{
+            background-color: blue;
+            padding: 20px;
+            color: #fff;
+        }  
+        .box-container > div{
+            margin:30px 0 ;
+            display: none;
+        }
+        .box-container .active{
+            display: block;
+        }
+        .buttons-container .btn-active{
+            color: #fff;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="buttons-container">
+                <button class="html btn-active">HTML</button>
+                <button class="css">CSS</button>
+                <button class="js">Javascript</button>
+            </div>
+            <div class="box-container">
+                <div class="box-1 active">
+                    <p>HTML Lorem ipsum, dolor  amet consectetur adipisicing elit. Magnam, consectetur? Assumenda cum molestiae voluptates distinctio temporibus rem rerum architecto, officia eaque, facere cumque voluptatum nemo, iste expedita amet reprehenderit quae impedit natus odit numquam consequuntur totam. Similique at earum ab.</p>
+                </div>
+                <div class="box-2">
+                    <p>CSS Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod vero aliquam ipsum! Aliquam similique maiores voluptate sunt cumque in consequuntur, iusto vel modi nisi! Numquam quia at nobis provident facere ea obcaecati voluptate quis qui quae ab, sit ex id aut excepturi repellat eum nulla corporis magni eaque. </p>
+                </div>
+                <div class="box-3">
+                    <p>JS Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod vero aliquam ipsum! Aliquam similique maiores voluptate sunt cumque in consequuntur, iusto vel modi nisi! Numquam quia at nobis provident facere ea obcaecati voluptate quis qui quae ab, sit ex id aut excepturi repellat eum nulla corporis magni eaque. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // geting buttons
+        let html = document.querySelector(".html")
+        let css = document.querySelector(".css")
+        let js = document.querySelector(".js")
+
+        // gettting elements 
+        let box1=document.querySelector(".box-1")
+        let box2=document.querySelector(".box-2")
+        let box3=document.querySelector(".box-3")
+
+        html.addEventListener('click',function(){
+            box1.classList.add('active');
+            box2.classList.remove('active');
+            box3.classList.remove('active');
+
+            html.classList.add("btn-active")
+            css.classList.remove("btn-active")
+            js.classList.remove("btn-active")
+        })
+        css.addEventListener('click',function(){
+            box2.classList.add('active');
+            box1.classList.remove('active');
+            box3.classList.remove('active');
+
+            css.classList.add("btn-active")
+            html.classList.remove("btn-active")
+            js.classList.remove("btn-active")
+        })
+        js.addEventListener('click',function(){
+            box3.classList.add('active');
+            box2.classList.remove('active');
+            box1.classList.remove('active');
+
+            js.classList.add("btn-active")
+            css.classList.remove("btn-active")
+            html.classList.remove("btn-active")
+        })
+
+    </script>
+</body>
+</html>

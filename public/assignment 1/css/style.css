@@ -29,7 +29,7 @@
     padding: 20px;
     transform: scale(.1);
     transition: .5s;
-
+opacity: 0;
     
 
     /* display: none; */
@@ -41,6 +41,7 @@
     transform: scale(1);
     top: 40%;
     z-index: 1;
+    opacity: 1;
 }
 .button {
     width: 100%;

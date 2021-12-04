@@ -10,6 +10,9 @@ let errorlist = document.querySelector(".errors-list");
 function clearErrors() {
     errorlist.innerHTML = "";
     errortag.classList.remove("show")
+    console.log(errors)
+    let lastItem = errors.length;
+    errors.splice(0,lastItem)
 
 
 }
@@ -23,7 +26,7 @@ create.addEventListener('click', function (a) {
     let username = document.querySelector("#username").value;
 
     if (username.length <= 6) {
-        console.log("ayush");
+        // console.log("");
         errors.push("Ensure the username is at least 6 characters long")
         a.preventDefault();
     }
@@ -31,18 +34,15 @@ create.addEventListener('click', function (a) {
     let pass = document.querySelector("#password").value;
     let cpass = document.querySelector("#password-confirmation").value;
     if (pass.length < 9) {
-        console.log("ayush");
         errors.push("Ensure the password is at least 10 characters long")
         a.preventDefault();
     }
     if (cpass !== pass) {
-        console.log("ayush");
         errors.push("Ensure the password and confirmation password match")
         a.preventDefault();
     }
     let terms = document.querySelector("#terms").checked;
     if (terms == false) {
-        console.log("ayush");
         errors.push("Ensure the terms checkbox is checked")
         a.preventDefault();
     }
@@ -53,14 +53,19 @@ create.addEventListener('click', function (a) {
 
 
 function showErrors() {
-    let createli = document.createElement("li")
     errortag.classList.add("show")
-    errorlist.appendChild(createli)
-    createli.innerHTML = errors;
-    console.log(errors)
+    // createli.innerHTML = errors;
     for (let i = 0; i < errors.length; i++) {
-        console.log("hello")
-        errorlist.innerHTML = "<li>" + errors[i] + "</li>";
-        
+        // console.log(errors);
+        // li tag created 
+        let createli = document.createElement("li")
+        // created value 
+        var textnode = document.createTextNode(errors[i]);
+        // added value in li tag 
+        createli.appendChild(textnode)
+        // added li in ul 
+        errorlist.appendChild(createli)
+
+        // errorlist.innerHTML = "<li>" + errors[i] + "</li>";
     }
 }

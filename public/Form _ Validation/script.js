@@ -10,7 +10,8 @@ let errorlist = document.querySelector(".errors-list");
 function clearErrors() {
     errorlist.innerHTML = "";
     errortag.classList.remove("show")
-    console.log(errors)
+    console.log(errors
+        )
     let lastItem = errors.length;
     errors.splice(0,lastItem)
 

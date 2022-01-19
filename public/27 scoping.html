@@ -1,21 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>scoping</title>
 </head>
+
 <body>
     <ul>
         <li>Scoping means scoping of a variable</li>
         <li>If you declare some variable inside a function then its scope is up to the function only </li>
-        
+
     </ul>
 
 
     <script>
-        
+        function name() {
+            let a = "ayush"
+            console.log(a)
+        }
+
+        name()
+
+        // below one will not work because that value is inside of function 
+        // console.log(a)
+        // scope is define scope of variable 
+        {
+            let a = 100
+            console.log(a)
+        }
+        {
+            let b = 200
+            console.log(b)
+        }
+        {
+            let c = 300
+            console.log(c)
+        }
+        // here we can access outside variable from inside 
+        // but cant access inside variable from outside  
+        let a = "shah";
+        function scope() {
+            let a = 25
+            console.log(a)
+        }
+        scope()
+
+        // first it will check inside wheather variable is there or not and then it will go outside
+
+
+        {
+            console.log("level 1")
+            let a = 1
+            console.log(a)
+            {
+                console.log("level 2")
+                let b = 2
+                // here i can access all outside variable including this scrope but not inside 
+                console.log(a)
+                console.log(b)
+                {
+                    // here i can access all outside variable including this scrope but not inside 
+                    console.log("level 3")
+                    let c = 3
+                    console.log(a)
+                    console.log(b)
+                    console.log(c)
+                    
+                }
+            }
+        }
+
     </script>
 </body>
+
 </html>

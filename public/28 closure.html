@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>closure</title>
+</head>
+<body>
+
+    <script>
+        // closure is nothing but it is modified version of scoping 
+        let ayush = "closure"
+        function close(){
+            console.log(ayush)
+
+        }
+        close()
+        // upper thing is nothing but closure  
+        // so there is a function inside which we have access of outside variable 
+        
+        
+        function nest(a){
+            function nestInside(b){
+                console.log(a)
+                console.log(b)
+                // here also i have access of outside parameter/element means a 
+            }
+            // function nesting 
+            nestInside(20)
+            // here also if function is declared inside so it has scope till here only so it will run inside this scope only 
+            // it cant be run outside 
+        }
+        nest(10)
+        // we can access outside elements fron inside but not inside element from outside 
+
+        // here function is declared 
+        function exp(x){
+            // here another function is declared inside  
+            function expinner(y){
+                console.log(x)
+                console.log(y)
+            }
+            // returned value and stored in exp() function
+            return expinner
+        }
+        // stored value inside variable 
+        let z = exp(100)
+        // runed inside function using storing method 
+        z(20)
+    </script>
+</body>
+</html>

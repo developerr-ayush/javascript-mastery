@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>constructor and new</title>
+</head>
+<body>
+    
+    <script>
+        // constructor function is used to avoid repeatation 
+        function car(modal,color,price){
+            this.modal = modal
+            this.color = color
+            this.price = price
+        }
+        let car1 = new car("Maruti","red",20000)
+        let car2 = new car("Toyota","blue",30000)
+        console.log(car1)
+        console.log(car2)
+    </script>
+</body>
+</html>

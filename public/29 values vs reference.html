@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>values vs reference</title>
+</head>
+<body>
+    <script>
+        let a = 10 // here its value
+        let b =[10,20,30,40] // here it will take reference you can say this array is stored somewhere and location is shown over here
+        let c = b // here upper location is stored 
+        //so if i change in c 
+        c.push(100)
+        console.log(c);
+        console.log(b);
+        // then values are add or removed in that location 
+        //so both output will be same because we are changing to reference
+
+        // it means 
+        let aa =[1,2,3]// 06 mumbai
+        let bb =[1,2,3] // 07 mumbai
+        console.log(aa==bb)
+        // this is false because both are having different address
+        // here we are changng in address to we can change values in const using this because we are changing in address we are not changing address 
+        
+    </script>
+</body>
+</html>

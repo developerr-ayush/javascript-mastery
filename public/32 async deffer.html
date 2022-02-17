@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async and Defer</title>
+</head>
+<body>
+    
+
+    <script>
+        // async means it will start doenloading js file in background and as file is downloaded it will execute it 
+        // defer means it will download javascript in background and load html and css and then it will after its loaded then js will execute 
+
+        // for eg 
+        // we have one js file added in head tag with async so it will start downloading that file in background 
+        // but if that file is downloaded when page is loading then it will immidialy stop that and load first js file so it creates this issue 
+        // so if we use defer then it will download it in background and then it will run all other files and atlast it will run that js file  
+    </script>
+     <!-- it is used as below  -->
+    <!-- <script async src="js/script.js"></script> -->
+    <script defer src="js/script.js"></script>
+</body>
+</html>

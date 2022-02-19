@@ -20,7 +20,25 @@
             ayush()
         }
         let button = document.getElementById("clickme")
-        button.addEventListener("click", abs)
+        // button.addEventListener("click", abs)
+
+        function add(x,y){
+            return(x+y)
+        }
+        function sub(x,y){
+            return(x-y)
+        }
+        function multiply(x,y){
+            return(x*y)
+        }
+        function divide(x,y){
+            return(x/y)
+        }
+
+        function abx(x,y,oper){
+            console.log(oper(x,y))
+        }
+        abx(10,20,add)
     </script>
 </body>
 </html>

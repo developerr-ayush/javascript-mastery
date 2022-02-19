@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronise code</title>
+</head>
+<body>
+    <script>
+        function first(){
+            console.log("first")
+        }
+        setTimeout(() => {
+            alert("worked after other code")
+        }, 10);
+        function last(){
+            console.log("last")
+        }
+
+        // synchronous Code means our code will start from top to bottom and if it got stuck in between then it wont be getting further 
+        // Asynchronous Code means  opposite of synchronous Code
+    </script>
+</body>
+</html>

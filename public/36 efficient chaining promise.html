@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+</head>
+
+<body>
+
+
+    <script>
+        // chaining promise
+
+        // promises declared
+        let pr1 = new Promise(function (resolve, reject) {
+            let x = 10
+            if (x === 10) {
+                resolve("Successfull 1")
+            } else {
+
+                reject("failed")
+            }
+        })
+
+        let pr2 = new Promise(function (resolve, reject) {
+            let y = 10
+            if (y === 10) {
+                resolve("Successfull 2")
+            } else {
+
+                reject("failed")
+            }
+        })
+        // runned in chaining 
+        pr1.then(function (resolve) {
+            console.log(resolve)
+            return pr2
+        }).then(function(resolve){
+            
+            console.log(resolve)
+
+        }).catch(function (reject) {
+
+            console.log(reject)
+        })
+    </script>
+</body>
+
+</html>

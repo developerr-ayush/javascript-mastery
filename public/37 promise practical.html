@@ -10,8 +10,38 @@
     
     <script>
         setTimeout(() => {
-            
+            console.log("this workd after 2s")
+            setTimeout(() => {
+                console.log("this workd after 4s")
+                setTimeout(() => {
+                    console.log("this workd after 6s")
+                    
+                }, 2000);
+            }, 2000);
         }, 2000);
+
+
+        let mytimer = new Promise(function(resolve,reject){
+            setTimeout(() => {
+                resolve("1st code")
+            }, 2000);
+        })
+        mytimer.then(function(resolve){
+            console.log(resolve)
+
+            let mytimer2 = new Promise(function(resolve,reject){
+                setTimeout(() => {
+                    resolve("2nd code")
+                }, 2000);
+            })
+            return mytimer2
+            // or 
+            // mytimer2.then(function(resolve,reject){
+            //     console.log(resolve)
+            // })
+        }).then(function(resolve,reject){
+                console.log(resolve)
+            })
     </script>
 </body>
 </html>

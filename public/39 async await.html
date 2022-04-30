@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let promise1 = new Promise(function(resolve,reject){
+            let a = 1;
+            if(a===1){
+
+                resolve("solved promise 1")
+            }else(
+                reject('failed promise 1')
+            )
+        })
+        async function ayush(){
+            let pro1 = await promise1
+            console.log(promise1)
+        }
+        ayush()
+
+        
+
+        let promise2 = new Promise(function(resolve,reject){
+            let a = 2;
+            if(a===1){
+
+                resolve("solved promise 2")
+            }else(
+                reject('failed promise 2')
+            )
+        })
+        async function ayush2(){
+            try{
+
+                let pro1 = await promise2
+                console.log(promise2)
+            }catch(reject){
+                console.log(reject)
+            }
+        }
+        ayush2()
+
+        
+    </script>
+</body>
+</html>

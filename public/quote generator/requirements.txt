@@ -1,0 +1,16 @@
+1. Use below API to get quotes from this will give you a list of 1500 quotes.
+
+https://type.fit/api/quotes
+
+2. Use Fetch and store all the quotes in a varible.
+
+3. Target this 3 elements ID from HTML #show & #author & #btn
+
+4. On click of button run a function.
+
+5. Inside that function create a random number between 0 to 1500 and 
+store it in a variable(Search on google on how to generate random number in JS)
+
+6. From the array you have fetched from API use the random number to get the data from that position of array.
+
+7. Put text(quote) and author in HTML elements #show & #author

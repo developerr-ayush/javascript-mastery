@@ -1,3 +1,4 @@
+
 // api key
 let apiKey = "1765d53befd148d28a0ebe0ea8141341";
 let source = "the-times-of-india";
@@ -17,8 +18,7 @@ ayush().then(function (articles) {
   articles.forEach((element) => {
     let content = `
     
-    <div class="col-12">
-      <div class="news-card-box">
+      <div class="news-card-box m-3">
           <div class="image-side">
               <img src="${element.urlToImage}" alt="" class="image-news">
           </div>
@@ -38,10 +38,17 @@ ayush().then(function (articles) {
               </p>
           </div>
       </div>
-    </div>`;
+    `;
 
     itemsAppendHtml += content;
   });
   contentBox.innerHTML=itemsAppendHtml;
-});
+  
+  
 
+  $("#add-content-over-here").owlCarousel({
+    items:1,
+    margin:20,
+  })
+
+});

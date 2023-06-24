@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            // for each 
+            // used to loop every element in array 
+            const name = ["Ayush", "Sahil", "Pooja", "Kajal"]
+            name.forEach(element => {
+                console.log(element)
+            });
+            // filter 
+            // used to do filter as the name suggest 
+            const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+            let result = numbers.filter(e => {
+                return e > 4;
+            })
+            console.log("before filter " + numbers)
+            console.log("after filter > 4" + result)
+            // reduce 
+            // used to do functions in all elements
+            let reduce = numbers.reduce((accu, curr) => {
+                console.log(accu)
+                return accu + curr;
+            }, 0)// accumalator/accu value
+            console.log("reduce = " + reduce)
+            //  map method 
+            // used to do operations on exisiting array 
+            const products = [
+                { name: "Nike Shoe", price: 15_000 },
+                { name: "Iphone 14 PRO MAX", price: 1_24_999 },
+                { name: "MacBook Air 15", price: 1_34_900 },
+                { name: "Samsung Buds 2 PRO", price: 17_999 },
+            ]
+            let discount = 10; // percent 
+            let primeSale = products.map(e => {
+                return { name: e.name, price: (e.price - (e.price / discount)) }
+            })
+            console.log(products);
+            console.log(primeSale);
+
+            // we can also chain this 
+            // products.map().filter().reduce() // ike this
+        </script>
+    </body>
+
+</html>

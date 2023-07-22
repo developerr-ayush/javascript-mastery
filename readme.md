@@ -26,7 +26,7 @@ JavaScript does not require explicit data type declarations, unlike languages li
 2. **Boolean:**
    - Represents truth values (true or false / yes or no).
    - Examples:
-     ```
+     ```javascript
      let age = 23;
      let isAdult = true;
 
@@ -39,7 +39,7 @@ JavaScript does not require explicit data type declarations, unlike languages li
    - Enclosed in either double or single quotes.
    - Can contain any characters, including spaces.
    - Examples:
-     ```
+     ```javascript
      let firstName = "Tony";
      let char = 'a';
      ```
@@ -47,14 +47,14 @@ JavaScript does not require explicit data type declarations, unlike languages li
 4. **Undefined:**
    - Represents a variable that has not been assigned a value.
    - Example:
-     ```
+     ```javascript
      let name;
      ```
 
 5. **Null:**
    - Represents the intentional absence of any object value.
    - Example:
-     ```
+     ```javascript
      let a = null;
      ```
 
@@ -130,7 +130,7 @@ TypeScript is the next version of JavaScript and is used in numerous companies. 
 Strings in JavaScript are indexed, meaning each letter is assigned a position. Indexing starts from 0, and we can access individual characters using their index.
 
 Example:
-```
+```javascript
 let name = 'TONY STARK';
 name[0] // 'T'
 name[4] // ' '
@@ -143,7 +143,7 @@ name[name.length - 1] // 'K'
 Concatenation is the process of combining multiple strings together using the `+` operator.
 
 Example:
-```
+```javascript
 "Tony" + "Stark" // "Tonystark"
 
 let firstName = 'Tony';
@@ -158,7 +158,7 @@ Remember to follow the rules for creating variables and identifiers to ensure sm
 `console.log()` is used to write or log messages on the console, which is a tool for developers to view outputs and debug their code. It is commonly used to display values, results of calculations, or any other information that may be useful during development.
 
 Examples:
-```
+```javascript
 console.log("hello");
 // Output: hello
 
@@ -196,10 +196,12 @@ Example:
 Template literals, denoted by backticks (\`), allow us to embed expressions within a string. The expressions are enclosed in `${}`.
 
 Example:
-```js
+```javascript
 let a = 5;
 let b = 10;
-console.log(`Your pay is ${a + b} rupees.`);
+console.log(`
+
+Your pay is ${a + b} rupees.`);
 // Output: Your pay is 15 rupees.
 ```
 
@@ -222,7 +224,7 @@ Conditional statements allow us to make decisions based on certain conditions.
 The `if` statement is used to execute a block of code if a specified condition is true. If the condition is false, the `else` block is executed (if provided).
 
 Example:
-```js
+```javascript
 let age = 19;
 if (age >= 19) {
     console.log("You are an adult.");
@@ -236,7 +238,7 @@ if (age >= 19) {
 The `else if` statement allows us to check multiple conditions in a sequence.
 
 Example:
-```js
+```javascript
 let marks = 63;
 if (marks >= 90) {
     console.log("A grade");
@@ -254,7 +256,7 @@ if (marks >= 90) {
 Nested if-else allows us to have multiple levels of conditions.
 
 Example:
-```js
+```javascript
 let number = 50;
 if (number >= 50) {
     if (number === 50) {
@@ -280,7 +282,7 @@ Everything else is considered truthy.
 The `switch` statement is used when we have fixed values to compare.
 
 Example:
-```js
+```javascript
 let color = "red";
 switch (color) {
     case "red":
@@ -304,7 +306,7 @@ switch (color) {
 `alert()` displays an alert message as a popup on the web page.
 
 Example:
-```js
+```javascript
 alert("Something is wrong!");
 ```
 
@@ -313,7 +315,7 @@ alert("Something is wrong!");
 `prompt()` displays a dialog box that allows the user to enter some input.
 
 Example:
-```js
+```javascript
 let firstName = prompt("Enter your name");
 console.log(firstName);
 ```
@@ -330,7 +332,7 @@ String methods are actions that can be performed on strings, and they return a n
 - Returns a new string without leading or trailing white spaces.
 
 Example:
-```js
+```javascript
 let str = "   Hello, World!   ";
 let trimmedStr = str.trim();
 console.log(trimmedStr); // Output: "Hello, World!"
@@ -352,7 +354,7 @@ console.log(trimmedStr); // Output: "Hello, World!"
 - If the value is not found, it returns -1.
 
 Example:
-```js
+```javascript
 let str = "I love JavaScript!";
 let index = str.indexOf("love");
 console.log(index); // Output: 2
@@ -364,7 +366,7 @@ console.log(index); // Output: 2
 - If the ending index is not provided, it extracts till the end of the string.
 
 Example:
-```js
+```javascript
 let str = "JavaScript";
 let slicedStr = str.slice(4); // Extracts from index 4 to the end
 console.log(slicedStr); // Output: "Script"
@@ -375,7 +377,7 @@ console.log(slicedStr); // Output: "Script"
 - Returns a new string with the specified value replaced.
 
 Example:
-```js
+```javascript
 let str = "I love coding!";
 let replacedStr = str.replace("love", "enjoy");
 console.log(replacedStr); // Output: "I enjoy coding!"
@@ -385,7 +387,7 @@ console.log(replacedStr); // Output: "I enjoy coding!"
 - Creates and returns a new string with a specified number of copies of the original string.
 
 Example:
-```js
+```javascript
 let str = "Mango";
 let repeatedStr = str.repeat(3);
 console.log(repeatedStr); // Output: "MangoMangoMango"
@@ -396,19 +398,19 @@ console.log(repeatedStr); // Output: "MangoMangoMango"
 Arrays are a type of data structure in JavaScript that can store multiple values in a single variable. They are a collection of elements, and each element in an array has a unique index starting from 0.
 
 Example:
-```js
+```javascript
 let student1 = ["akhil", "akshat", "amit", "hatya", "aditya"];
 ```
 
 Arrays can also hold different types of values, making them flexible and powerful.
-```js
+```javascript
 let info = ["Akhil", 23, 89.9];
 ```
 
 Arrays are mutable, meaning you can change their elements after initialization.
 
 Example:
-```js
+```javascript
 let fruits = ["mango", "apple", "litchi"];
 fruits[0] = "banana";
 ```
@@ -426,7 +428,9 @@ Here are some commonly used Array methods:
 - `indexOf()`: Returns the index of the first occurrence of a specified element in an array.
 - `includes()`: Checks if an array includes a specific element and returns `true` or `false`.
 - `concat()`: Merges two or more arrays to create a new array.
-- `reverse()`: Reverses the order of elements in an array.
+- `reverse
+
+()`: Reverses the order of elements in an array.
 - `slice()`: Returns a shallow copy of a portion of an array.
 - `splice()`: Modifies an array by adding or removing elements at a specified index.
 - `sort()`: Sorts the elements of an array in place and returns the sorted array.
@@ -436,7 +440,7 @@ Here are some commonly used Array methods:
 Arrays are reference types in JavaScript, which means that when you create a new variable and assign it an array, the new variable holds a reference to the original array. Any changes made to the original array will be reflected in all references.
 
 Example:
-```js
+```javascript
 let fruits = ["mango", "apple", "litchi"];
 let copyFruits = fruits;
 fruits[0] = "banana";
@@ -448,7 +452,7 @@ console.log(copyFruits); // Output: ["banana", "apple", "litchi"]
 You can make an array constant using the `const` keyword. It allows you to perform operations on the array but prevents you from reassigning a new array to the constant variable.
 
 Example:
-```js
+```javascript
 const arr = [1, 2, 3, 4];
 arr.push(5); // This is allowed
 arr = [1, 2, 3, 4, 5]; // This is not allowed
@@ -459,6 +463,6 @@ arr = [1, 2, 3, 4, 5]; // This is not allowed
 Nested arrays are arrays of arrays, also known as multidimensional arrays.
 
 Example:
-```js
+```javascript
 let num = [[2, 4], [3, 6], [4, 8]];
 ```

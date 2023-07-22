@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            // call method is used when we want to have different functions and object and then we can combine it and also use it with this keyword
+            let object = {
+                age: 20
+            }
+            function callMethod(a, b, c) {
+                console.log(`this is created with call method ${this.age + a + b + c}`)
+            };
+            function applyMethod(a, b, c) {
+                console.log(`this is created with Apply method ${this.age + a + b + c}`)
+            };
+            callMethod.call(object, 2, 2, 3)
+            // we can also use call for multiple params 
+            // first we have to declare an array and pass it as second param in apply 
+            let arr = [2, 4, 5]
+            applyMethod.apply(object, arr)
+
+
+            // its same as 
+            let object2 = {
+                age: 20,
+                newAge: function (a, b) {
+                    console.log("this is created without call method " + this.age + a + b)
+                }
+            }
+            object2.newAge(2, 3)
+
+
+        </script>
+    </body>
+
+</html>

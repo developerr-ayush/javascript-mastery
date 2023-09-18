@@ -348,7 +348,9 @@ Here are some commonly used Array methods:
 
 ## Array References
 
-Arrays are reference types in JavaScript, which means that when you create a new variable and assign it an array, the new variable holds a reference to the original array. Any changes made to the original array will be reflected in all references.
+if we say reference in js that means address, so Arrays are reference types in JavaScript, which means that when you create a new variable and assign it an array, the new variable holds a reference to the original array. Any changes made to the original array will be reflected in all references.
+
+lets take an example that i have 2 arrays declared like this `let a = [1,2,3]` and `let b = [1,2,3]` so if i compare `a == b` or `a === b` then it will result into false because when i create an array and store in variable then both array are stored on different location and the variable stores its reference(address) not the value, also this is reason if i declare variable using const keyword then it will just store its reference so that i can perform action in that array created using const.
 
 Example:
 ```javascript
@@ -371,9 +373,31 @@ arr = [1, 2, 3, 4, 5]; // This is not allowed
 
 ## Nested Arrays
 
-Nested arrays are arrays of arrays, also known as multidimensional arrays.
+Nested arrays are arrays of arrays, also known as multidimensional arrays. so array is holding another array 
 
 Example:
 ```javascript
 let num = [[2, 4], [3, 6], [4, 8]];
 ```
+we can access numbers like this
+num[0][1] - result : 2
+
+nested arrays are visualise using matrix like this
+2 4
+3 6
+4 8
+
+## loops
+to repeat a sequence of code we use loop. for eg you have to print 1 - 1000 numbers then we can use loops so that in just few lines of code we can print all values from 1 to 1000
+there are multiple types of loop lets see that
+
+### for loop
+for loop is most used loops in most of programming language, check the syntex below it shows how to write it, for initilisation we will declare variable or use existing one and this is done just once in process of loop
+
+syntex for for loop
+```js
+for (initialisation,condition, updation){
+
+}
+```
+ 
